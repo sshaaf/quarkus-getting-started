@@ -6,10 +6,20 @@ If you want to learn more about Quarkus, please visit its website: https://quark
 
 ## Running the application in dev mode
 
+
+The default application.properties expects you to have a postgresql database running. Hopefully you have docker installed then you can run the script in the repo home
+
+```
+./start-database.sh
+```
+
 You can run your application in dev mode that enables live coding using:
 ```
 ./mvnw quarkus:dev
 ```
+
+also notice the %dev in the application.properties which means that the %.dev is only when you run in dev mode. the other properties will be used in openshift.
+
 
 ## Packaging and running the application
 
